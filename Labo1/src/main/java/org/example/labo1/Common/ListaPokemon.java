@@ -17,8 +17,8 @@ public class ListaPokemon {
                 .id(1L)
                 .name("Poliwirth")
                 .type("Water")
-                .weakness("Grass")
-                .zona("Ruta 24")
+                .weakness(List.of("Electric", "Grass"))
+                .zona("Lago")
                 .region("Kanto")
                 .build());
 
@@ -26,16 +26,16 @@ public class ListaPokemon {
                 .id(2L)
                 .name("Zoroak")
                 .type("Dark")
-                .weakness("Bug")
-                .zona("Ruta 20")
+                .weakness(List.of("Bug", "Fighting", "Fairy"))
+                .zona("Bosque")
                 .region("Teselia")
                 .build());
 
         this.pokemons.add(Pokemon.builder()
                 .id(3L)
                 .name("Tapu Koko")
-                .type("Electric")
-                .weakness("Ground")
+                .type("Fairy")
+                .weakness(List.of("Poison", "Steel"))
                 .zona("Mele-Mele Temple")
                 .region("Alola")
                 .build());
@@ -43,8 +43,51 @@ public class ListaPokemon {
                 .id(4L)
                 .name("Ralts")
                 .type("Psychic")
-                .weakness("Dark")
-                .zona("Ruta 103")
+                .weakness(List.of("Dark", "Ghost", "Bug"))
+                .zona("Bosque")
+                .region("Hoenn")
+                .build());
+        this.pokemons.add(Pokemon.builder()
+                .id(5L)
+                .name("Kyogre")
+                .type("Water")
+                .weakness(List.of("Electric", "Grass"))
+                .zona("Cueva Origen")
+                .region("Hoenn")
+                .build());
+        this.pokemons.add(Pokemon.builder()
+                .id(6L)
+                .name("Mudkip")
+                .type("Water")
+                .weakness(List.of("Electric", "Grass"))
+                .zona("Lago")
+                .region("Hoenn")
+                .build());
+
+        this.pokemons.add(Pokemon.builder()
+                .id(7L)
+                .name("Sharpedo")
+                .type("Water")
+                .weakness(List.of("Electric", "Grass"))
+                .zona("Mar")
+                .region("Hoenn")
+                .build());
+
+        this.pokemons.add(Pokemon.builder()
+                .id(8L)
+                .name("Absol")
+                .type("Dark")
+                .weakness(List.of("Bug", "Fighting", "Fairy"))
+                .zona("Bosque")
+                .region("Hoenn")
+                .build());
+
+        this.pokemons.add(Pokemon.builder()
+                .id(9L)
+                .name("Gardevoir")
+                .type("Psychic")
+                .weakness(List.of("Dark", "Ghost", "Bug"))
+                .zona("Ciudad")
                 .region("Hoenn")
                 .build());
     }
