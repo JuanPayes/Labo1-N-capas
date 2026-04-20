@@ -19,21 +19,24 @@ public class PokemonServices {
         return pokemonRepository.findAllPokemons();
     }
 
-    public void filtrarTipo(){
+    public List<Pokemon> filtrarTipo(String type){
         List<Pokemon> typesList = pokemonRepository.findAllPokemons().stream()
-                .filter(obj -> obj.getType() == "Water")
+                .filter(obj -> obj.getType().equals(type))
                 .toList();
+        return typesList;
     }
 
-    public void filtrarZona(){
+    public List<Pokemon> filtrarZona(String zone){
         List<Pokemon> zonelist = pokemonRepository.findAllPokemons().stream()
-                .filter(obj -> obj.getZona() == "Lago")
+                .filter(obj -> obj.getZona().equals(zone))
                 .toList();
+        return zonelist;
     }
 
-    public void filtrarWeakness(){
+    public List<Pokemon> filtrarWeakness(){
         List<Pokemon> weaknesslist = pokemonRepository.findAllPokemons().stream()
-                .filter(obj -> obj.getWeakness() == List.of("Dark", "Ghost", "Bug"))
+                .filter(obj -> obj.getWeakness().equals(List.of("Dark", "Ghost", "Bug")))
                 .toList();
+        return weaknesslist;
     }
 }
