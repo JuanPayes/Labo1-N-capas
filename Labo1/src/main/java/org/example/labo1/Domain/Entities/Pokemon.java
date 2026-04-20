@@ -1,7 +1,13 @@
 package org.example.labo1.Domain.Entities;
 
-public class Pokemon {
+import lombok.*;
 
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+public class Pokemon {
+    private long id;
     private String name;
     private String type;
     private String weakness;
